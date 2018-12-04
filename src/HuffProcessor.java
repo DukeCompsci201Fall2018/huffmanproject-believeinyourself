@@ -90,8 +90,7 @@ public class HuffProcessor {
 		else
 		{
 			out.writeBits(1, 1);
-			out.writeBits(BITS_PER_WORD + 1, root.myValue);
-			return;
+			out.writeBits(9, root.myValue);
 		}
 		
 	}
