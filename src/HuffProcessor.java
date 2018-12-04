@@ -57,7 +57,7 @@ public class HuffProcessor {
 		// TODO Auto-generated method stub
 		while(true)
 		{
-			int read = in.readBits(1);
+			int read = in.readBits(BITS_PER_WORD);
 			if(read == -1)
 			{
 				break;
