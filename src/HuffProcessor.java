@@ -75,6 +75,10 @@ public class HuffProcessor {
 
 	private void writeHeader(HuffNode root, BitOutputStream out) {
 		// TODO Auto-generated method stub
+		if(root == null)
+		{
+			return;
+		}
 		if(root.myValue == 0)
 		{
 			out.writeBits(1, 0);
