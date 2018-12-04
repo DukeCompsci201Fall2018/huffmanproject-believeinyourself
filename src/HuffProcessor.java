@@ -79,22 +79,17 @@ public class HuffProcessor {
 		{
 			return;
 		}
-		if(root.myValue == 0)
+		if(root.myLeft != null || root.myRight != null)
 		{
 			out.writeBits(1, 0);
-			if(root.myLeft != null)
-			{
-				writeHeader(root.myLeft, out);
-			}
-			if(root.myRight != null)
-			{
-				writeHeader(root.myRight, out);
-			}
+			writeHeader(root.myLeft, out);
+			writeHeader(root.myRight, out);
 		}
 		else
 		{
 			out.writeBits(1, 1);
 			out.writeBits(9, root.myValue);
+			return;
 		}
 		
 	}
